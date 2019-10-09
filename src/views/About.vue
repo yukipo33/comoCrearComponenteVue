@@ -1,7 +1,10 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <h1>This is the second Table</h1>
+    <div class="tabla">
     <Tabla :titulos="tanjiro" :datos="zenitsu"></Tabla>
+    </div>
   </div>
 </template>
 <script>
@@ -16,18 +19,34 @@ export default {
   data: () => {
     return {
       tanjiro: [
+        // {
+        //   company: "x",
+        //   contact: "y",
+        //   country: "z"
+        // }
         {
-          company: "x",
-          contact: "y",
-          country: "z"
+          company: "Company",
+          contact: "Contact",
+          country: "Country"
         }
       ],
       zenitsu: [
-        { company: "powerade", contact: "magaly", country: "mexico" },
-        { company: "apple", contact: "jobs", country: "USA" },
-        { company: "mafia", contact: "corleone", country: "italia" }
+        { company: "Powerade", contact: "Jade", country: "Mexico" },
+        { company: "Apple", contact: "jobs", country: "USA" },
+        { company: "Samsung", contact: "Lee Jong Suk", country: "South Corea" }
       ]
     };
   }
 };
 </script>
+<style scoped>
+  .tabla{
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+  }
+  .about{
+    height: 82vh;
+  }
+</style>

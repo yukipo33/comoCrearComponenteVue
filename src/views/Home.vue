@@ -1,8 +1,11 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Tabla :estilo="tablaStyle" :titulos="inosuke" :datos="nezuko"></Tabla>
+    <HelloWorld msg="First Table"/>
+    <div class="tabla">
+      <Tabla :estilo="tablaStyle" :titulos="inosuke" :datos="nezuko"></Tabla>
+    </div>
+
   </div>
 </template>
 
@@ -20,43 +23,38 @@ export default {
   data: () => {
     return {
       inosuke: [
+        // {
+        //   company: "a",
+        //   contact: "b",
+        //   country: "c"
+        // }
         {
-          company: "a",
-          contact: "b",
-          country: "c"
+          company: "Company",
+          contact: "Contact",
+          country: "Country"
         }
       ],
       nezuko: [
-        { company: "gatorade", contact: "magaly", country: "mexico" },
-        { company: "jumex", contact: "raul", country: "suecia" },
-        { company: "dell", contact: "steve", country: "noruega" }
+        { company: "Gatorade", contact: "Magaly", country: "Mexico" },
+        { company: "Jumex", contact: "Raul", country: "Mexico" },
+        { company: "Xiaomi", contact: "Steve", country: "China" }
       ],
       tablaStyle: "tablaBlue"
     };
   }
 };
-/*
 
-'gatorade','magaly','mexico'
-
-
-{"company":"gatorade","contact": "magaly","country": "mexico"},
-{"company":"jumex","contact": "raul","country": "suecia"},
-{"company":"dell","contact": "steve","country": "noruega"}
-
-{company:"gatorade",contact: "magaly",country: "mexico"},
-{company:"jumex",contact: "raul",country: "suecia"},
-{company:"dell", contact: "steve",country: "noruega"}
-
-
-{company:'gatorade',contact: 'magaly',country: 'mexico'},
-{company:'jumex',contact: 'raul',country: 'suecia'},
-{company:'dell', contact: 'steve',country: 'noruega'}
-
-
-'{"company":"gatorade","contact": "magaly","country": "mexico"}',
-'{"company":"jumex","contact": "raul","country": "suecia"}',
-'{"company":"dell","contact": "steve","country": "noruega"}'
-
-*/
 </script>
+
+<style scoped>
+  .tabla{
+    width: 100%;
+    /* border: 2px solid pink; */
+    display: flex;
+    justify-content: center;
+  }
+  .home{
+    height: 82vh;
+  }
+
+</style>
